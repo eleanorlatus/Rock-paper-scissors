@@ -1,0 +1,9 @@
+img{
+    width: 300px;
+    height: 250px;
+}
+
+p.images{
+    display: flex;
+    justify-content: space-around;
+}
