@@ -18,6 +18,9 @@ let gameStatus = document.getElementById("gameStatus")
 let userScore=0
 let botScore=0
 
+document.getElementById("userScore").innerText = userScore
+document.getElementById("botScore").innerText = botScore
+
 rock.onclick = showRock
 paper.onclick = showPaper
 scissors.onclick = showScissors
@@ -63,22 +66,24 @@ function playGame(userChoice){
 }
 
 function showRock(){
-let result = playGame("rock")
-gameResult.innerText = result
-paper.classList.add('hidden')
-scissors.classList.add('hidden')
+    playAgain2()
+    let result = playGame("rock")
+    gameResult.innerText = result
+    paper.classList.add('hidden')
+    scissors.classList.add('hidden')
 
-if(result==="You win!"){
-    userScore+=1
-    document.getElementById("userScore").innerText = userScore
-}
-else if(result==="You lose!"){
-    botScore+=1
-    document.getElementById("botScore").innerText = botScore
-}
+    if(result==="You win!"){
+        userScore+=1
+        document.getElementById("userScore").innerText = userScore
+    }
+    else if(result==="You lose!"){
+        botScore+=1
+        document.getElementById("botScore").innerText = botScore
+    }
 }
 
 function showPaper(){
+    playAgain2()
     let result = playGame("paper")
     gameResult.innerText = result
     rock.classList.add('hidden')
@@ -95,6 +100,7 @@ function showPaper(){
 }
 
 function showScissors(){
+    playAgain2()
     let result = playGame("scissors")
     gameResult.innerText = result
     rock.classList.add('hidden')
@@ -122,6 +128,7 @@ function resetGame(){
     document.getElementById("userScore").innerText = userScore
     document.getElementById("botScore").innerText = botScore
     gameResult.innerText = "The game has been reset"
+    gameStatus.innerText = ""
 }
 
 function playAgain2(){
@@ -131,5 +138,7 @@ function playAgain2(){
 
     botRock.classList.add('hidden')
     botPaper.classList.add('hidden')
-    botScissors.classList.add('hidden') 
+    botScissors.classList.add('hidden')
+    
+    gameStatus.innerText = ""
 }

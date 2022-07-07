@@ -2,6 +2,10 @@ html{
     font-size: 62.5%
 }
 
+p,span{
+    font-size: 1.5rem;
+}
+
 img{
     width: 300px;
     height: 250px;
@@ -12,9 +16,9 @@ p.images{
     justify-content: space-around;
 }
 
-#gameResult{
+#gameResult, #gameStatus{
     color: red;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 .hidden{
