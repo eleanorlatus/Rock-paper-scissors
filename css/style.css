@@ -16,3 +16,7 @@ p.images{
     color: red;
     font-size: 5rem;
 }
+
+.hidden{
+    display:none;
+}

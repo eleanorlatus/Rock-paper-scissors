@@ -10,17 +10,26 @@
 <body>
     <h2>Welcome to our rock, paper, scissors robot.</h2>
     <p> Make your selection below and we will see if you can beat the robot.</p>
+    <p id="gameStatus"></p>
+   
+
     <p class="images">
         <img src="./images/rock.jpg" alt="Rock" id="rock">
         <img src="./images/paper.jpg" alt="Paper" id="paper">
         <img src="./images/scissors.jpg" alt="Scissors" id="scissors">
+
+        <img src="./images/rock.jpg" alt="Rock" id="botRock" class='hidden'>
+        <img src="./images/paper.jpg" alt="Paper" id="botPaper" class='hidden'>
+        <img src="./images/scissors.jpg" alt="Scissors" id="botScissors" class='hidden'>
     </p>
-    <p id="gameStatus">XYZ</p>
     <p id="gameResult"></p>
+    <button type="button" id="playAgain">Play again</button>
+    <button type="button" id="reset">Reset the scores</button>
+   
     <p>Tally</p>
     <p>You: <span id="userScore"></span></p>
     <p>Robot: <span id="botScore"></span></p>
-    <button type="button" id="reset">Reset</button>
+    
 
     <script type="text/javascript" src="js/main.js"></script>
 </body>
