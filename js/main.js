@@ -123,6 +123,7 @@ reset.onclick = resetGame
 playAgain.onclick = playAgain2
 
 function resetGame(){
+    playAgain2()
     userScore = 0
     botScore = 0
     document.getElementById("userScore").innerText = userScore

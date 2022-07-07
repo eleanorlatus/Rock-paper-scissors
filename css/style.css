@@ -7,8 +7,8 @@ p,span{
 }
 
 img{
-    width: 300px;
-    height: 250px;
+    width: 30%;
+    height: 30%;
 }
 
 p.images{
@@ -23,4 +23,30 @@ p.images{
 
 .hidden{
     display:none;
+}
+
+
+@media (max-width:800px){
+    p.images{
+        /* flex-direction: column;
+        align-content: center; */
+        flex-wrap: wrap;
+        }
+    
+    img{
+        width: 50%;
+        height: 50%;
+        }
+}
+
+@media (min-width:320px) {
+    p.images{
+        flex-direction: column;
+        align-content: center;
+        }
+    
+    img{
+        width: 50%;
+        height: 50%;
+        }  
 }
