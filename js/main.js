@@ -4,7 +4,6 @@
 // conditional that decides who has won and adds 1 to the tally
 // reset button
 
-
 let rock = document.getElementById("rock")
 let paper = document.getElementById("paper")
 let scissors = document.getElementById("scissors")
@@ -16,7 +15,7 @@ let botScore=0
 rock.onclick = showRock
 paper.onclick = showPaper
 scissors.onclick = showScissors
-reset.onclick = reset
+reset.onclick = resetGame
 
 function rockPaperScissors(){
     let random = Math.ceil(Math.random() * 3)
@@ -84,10 +83,10 @@ function showScissors(){
     }
 }
 
-function reset(){
-    // userScore = 0
-    // botScore = 0
-    // document.getElementById("userScore").innerText = userScore
-    // document.getElementById("botScore").innerText = botScore
-    document.getElementById("botScore").innerHTML = "pie"
+function resetGame(){
+    userScore = 0
+    botScore = 0
+    document.getElementById("userScore").innerText = userScore
+    document.getElementById("botScore").innerText = botScore
+    document.getElementById("gameResult").innerText = "The game has been reset"
 }
