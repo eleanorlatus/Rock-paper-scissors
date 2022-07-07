@@ -39,7 +39,7 @@ p.images{
         }
 }
 
-@media (min-width:320px) {
+@media (max-width:320px) {
     p.images{
         flex-direction: column;
         align-content: center;
