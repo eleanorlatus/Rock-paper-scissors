@@ -29,7 +29,7 @@ p.images{
 }
 
 #gameResult, #gameStatus{
-    color: red;
+    color: rgba(0, 72, 226, 0.905);
     font-size: 3rem;
 }
 
