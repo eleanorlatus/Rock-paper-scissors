@@ -1,19 +1,13 @@
-//psuedo-code
-// bot that randomly plays RPS
-// allow user to select choice using onclick
-// conditional that decides who has won and adds 1 to the tally
-// reset button
+const rock = document.getElementById("rock")
+const paper = document.getElementById("paper")
+const scissors = document.getElementById("scissors")
 
-let rock = document.getElementById("rock")
-let paper = document.getElementById("paper")
-let scissors = document.getElementById("scissors")
+const botRock = document.getElementById("botRock")
+const botPaper = document.getElementById("botPaper")
+const botScissors = document.getElementById("botScissors")
 
-let botRock = document.getElementById("botRock")
-let botPaper = document.getElementById("botPaper")
-let botScissors = document.getElementById("botScissors")
-
-let gameResult = document.getElementById("gameResult")
-let gameStatus = document.getElementById("gameStatus")
+const gameResult = document.getElementById("gameResult")
+const gameStatus = document.getElementById("gameStatus")
 
 let userScore=0
 let botScore=0
@@ -26,7 +20,7 @@ paper.onclick = showPaper
 scissors.onclick = showScissors
 
 function rockPaperScissors(){
-    let random = Math.ceil(Math.random() * 3)
+    const random = Math.ceil(Math.random() * 3)
        if(random===1){
         return "rock"
        }
@@ -51,7 +45,7 @@ else{
 }
 
 function playGame(userChoice){
-    let botChoice = rockPaperScissors()
+    const botChoice = rockPaperScissors()
     showBotChoice(botChoice)
     gameStatus.innerText = `You played ${userChoice} and the bot played ${botChoice}`
     if((userChoice === "rock" && botChoice==="paper") || (userChoice ==="paper" && botChoice==="scissors") || (userChoice === "scissors" && botChoice==="rock")){
@@ -66,8 +60,8 @@ function playGame(userChoice){
 }
 
 function showRock(){
-    playAgain2()
-    let result = playGame("rock")
+    pressplayAgain()
+    const result = playGame("rock")
     gameResult.innerText = result
     paper.classList.add('hidden')
     scissors.classList.add('hidden')
@@ -83,8 +77,8 @@ function showRock(){
 }
 
 function showPaper(){
-    playAgain2()
-    let result = playGame("paper")
+    pressplayAgain()
+    const result = playGame("paper")
     gameResult.innerText = result
     rock.classList.add('hidden')
     scissors.classList.add('hidden')
@@ -100,8 +94,8 @@ function showPaper(){
 }
 
 function showScissors(){
-    playAgain2()
-    let result = playGame("scissors")
+    pressplayAgain()
+    const result = playGame("scissors")
     gameResult.innerText = result
     rock.classList.add('hidden')
     paper.classList.add('hidden')
@@ -116,23 +110,25 @@ function showScissors(){
     }
 }
 
-let reset = document.getElementById("reset")
-let playAgain = document.getElementById("playAgain")
+const reset = document.getElementById("reset")
+const playAgain = document.getElementById("playAgain")
 
 reset.onclick = resetGame
-playAgain.onclick = playAgain2
+playAgain.onclick = pressplayAgain
 
 function resetGame(){
-    playAgain2()
+    alert(`You scored ${userScore} and the computer scored ${botScore}`)
+    pressplayAgain()
     userScore = 0
     botScore = 0
     document.getElementById("userScore").innerText = userScore
     document.getElementById("botScore").innerText = botScore
     gameResult.innerText = "The game has been reset"
     gameStatus.innerText = ""
+    
 }
 
-function playAgain2(){
+function pressplayAgain(){
     rock.classList.remove('hidden')
     paper.classList.remove('hidden')
     scissors.classList.remove('hidden')

@@ -6,21 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
 	<link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6528dd7a8c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h2>Welcome to our rock, paper, scissors robot.</h2>
-    <p>Make your selection below and let's see if you can beat the robot.</p>
+    <h2>Welcome to our rock, paper, scissors game.</h2>
+    <p>Make your selection below and let's see if you can beat the computer.</p>
     <p id="gameStatus"></p>
    
 
     <p class="images">
-        <img src="./images/rock.jpg" alt="Rock" id="rock">
+        <span id="rock"><i class="fa-solid fa-hand-back-fist fa-4x"></i></span>
+        <span id="paper"><i class="fa-solid fa-hand fa-4x"></i></span>
+        <span id="scissors"><i class="fa-solid fa-hand-scissors fa-4x"></i></span>
+
+        <span class="hidden" id="botRock"><i class="fa-solid fa-hand-back-fist fa-4x"></i></span>
+        <span class="hidden" id="botPaper"><i class="fa-solid fa-hand fa-4x"></i></span>
+        <span class="hidden" id="botScissors"><i class="fa-solid fa-hand-scissors fa-4x"></i></span>
+        <!-- <img src="./images/rock.jpg" alt="Rock" id="rock">
         <img src="./images/paper.jpg" alt="Paper" id="paper">
         <img src="./images/scissors.jpg" alt="Scissors" id="scissors">
 
         <img src="./images/rock.jpg" alt="Rock" id="botRock" class='hidden'>
         <img src="./images/paper.jpg" alt="Paper" id="botPaper" class='hidden'>
-        <img src="./images/scissors.jpg" alt="Scissors" id="botScissors" class='hidden'>
+        <img src="./images/scissors.jpg" alt="Scissors" id="botScissors" class='hidden'> -->
     </p>
     <p id="gameResult"></p>
     <button type="button" id="playAgain">Play again</button>

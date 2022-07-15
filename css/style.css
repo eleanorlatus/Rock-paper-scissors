@@ -6,10 +6,10 @@ p,span{
     font-size: 1.5rem;
 }
 
-img{
-    width: 30%;
-    height: 30%;
-}
+/* .fa-solid{
+    width: 60%;
+    height: 60%;
+} */
 
 p.images{
     display: flex;
