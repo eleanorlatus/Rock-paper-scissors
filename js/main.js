@@ -138,4 +138,5 @@ function pressplayAgain(){
     botScissors.classList.add('hidden')
     
     gameStatus.innerText = ""
+    gameResult.innerText = ""
 }

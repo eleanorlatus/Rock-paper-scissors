@@ -2,14 +2,26 @@ html{
     font-size: 62.5%
 }
 
-p,span{
+body{
+    font-size: 2rem;
+}
+
+button{
     font-size: 1.5rem;
 }
 
-/* .fa-solid{
-    width: 60%;
-    height: 60%;
-} */
+button:hover{
+    background-color: rgba(170, 193, 241, 0.8);
+    cursor: pointer;
+}
+
+.fa-solid{
+    color: rgba(33, 67, 141, 0.8);
+}
+.fa-solid:hover{
+    color: rgba(170, 193, 241, 0.8);
+    cursor: pointer; 
+}
 
 p.images{
     display: flex;
